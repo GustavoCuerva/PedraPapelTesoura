@@ -1,0 +1,2 @@
+Esse projeto visa o entreterimento junto com o aprimoramento de habilidades com desenvolvimento front-end.
+Utilizando-se da linguagem de programação JavaScript para desenvolvimento da lógica, este é um projeto bem intuitivo cujo possui uma área de seleção do jogador junto com o desenvolvimento de uma pequena IA para jogar junto deste.
