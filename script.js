@@ -27,8 +27,7 @@ function jogarIA(){
             iaOPT = x.childNodes[0].getAttribute('opt');
         }
     });
-    alert(playerOPT);
-    alert(iaOPT);
+    vencedor();
 }
 
 //Seleção do Jogador
@@ -40,3 +39,55 @@ elementos.forEach((x,i) => {
         jogarIA();
     });
 });
+
+//Valindando o ganhador
+
+function vencedor(){
+    if(playerOPT=='pedra'){
+        if (iaOPT=='pedra') {
+
+            alert('Empate');
+
+        }else if(iaOPT=='papel'){
+
+            alert('Derrota');
+
+        }else if(iaOPT=='tesoura'){
+            
+            alert('Vitória');
+
+        }
+    }
+
+    if(playerOPT=='papel'){
+        if (iaOPT=='pedra') {
+
+            alert('Vitória');
+
+        }else if(iaOPT=='papel'){
+            
+            alert('Empate');
+        
+        }else if(iaOPT=='tesoura'){
+            
+            alert('Derrota');
+
+        }
+    }
+
+    if(playerOPT=='tesoura'){
+        if (iaOPT=='pedra') {
+        
+            alert('Derrota');
+        
+        }else if(iaOPT=='papel'){
+        
+            alert('Vitória');
+        
+        }else if(iaOPT=='tesoura'){
+            
+            alert('Empate');
+
+        }
+    }
+}
