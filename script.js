@@ -5,6 +5,10 @@ var opcoes = document.querySelector('.config');
 var reiniciar = document.querySelector('.reiniciar');
 var sair = document.querySelector('.sair');
 var rodadasRestantes = document.querySelector('.rodadasRestante span');
+var span_placarPlayer = document.querySelector('.placarJogador');
+var spna_placarIA = document.querySelector('.placarIA');
+var placarPlayer = 0;
+var placarIA = 0;
 var numRodadas;
 var playerOPT = "";
 var iaOPT = "";
@@ -67,6 +71,7 @@ function jogarIA(){
         }
     });
     vencedor();
+    menosRodada();
 }
 
 //Seleção do Jogador
@@ -84,49 +89,70 @@ elementos.forEach((x,i) => {
 function vencedor(){
     if(playerOPT=='pedra'){
         if (iaOPT=='pedra') {
-
-            alert('Empate');
+            //Empate
+            numRodadas++;
 
         }else if(iaOPT=='papel'){
-
-            alert('Derrota');
+            //Derrota
+            derrota();
 
         }else if(iaOPT=='tesoura'){
-            
-            alert('Vitória');
+            //Vitória
+            vitoria();
 
         }
     }
 
     if(playerOPT=='papel'){
         if (iaOPT=='pedra') {
-
-            alert('Vitória');
+            //Vitória
+            vitoria();
 
         }else if(iaOPT=='papel'){
-            
-            alert('Empate');
+            //Empate
+            numRodadas++;
         
         }else if(iaOPT=='tesoura'){
-            
-            alert('Derrota');
+            //Derrota
+            derrota();
 
         }
     }
 
     if(playerOPT=='tesoura'){
         if (iaOPT=='pedra') {
-        
-            alert('Derrota');
+            //Derrota
+            derrota();
         
         }else if(iaOPT=='papel'){
-        
-            alert('Vitória');
-        
+            //Vitória
+            vitoria();
+
         }else if(iaOPT=='tesoura'){
-            
-            alert('Empate');
+            //Empate
+            numRodadas++;
 
         }
     }
+}
+
+//Diminui numero de rodadas
+
+function menosRodada(){
+    numRodadas--;
+    rodadasRestantes.innerHTML = numRodadas;
+}
+
+//Derrota
+
+function derrota(){
+    placarIA++;
+    spna_placarIA.innerHTML = placarIA;
+}
+
+//Vitória
+
+function vitoria(){
+    placarPlayer++;
+    span_placarPlayer.innerHTML = placarPlayer;
 }
