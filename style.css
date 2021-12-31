@@ -156,3 +156,57 @@ div.rodadas input{
 .none{
     display: none;
 }
+
+/*Vencedor*/
+.vencedor{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(76, 43, 226);
+    color: white;
+    width: 70%;
+    max-width: 500px;
+    height: 33%;
+    padding-top: 20px;
+    max-height: 300px;
+    border-radius: 15px;
+    min-width: 400px;
+    min-height: 235px;
+    text-align: center;
+}
+
+.vencedor h2{
+    font-size: 40px;
+}
+
+.vencedor span{
+    margin: 3px;
+    background-color: #01dfba;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.vencedor span.placarJ{
+    background-color: #0c7cea;
+}
+
+.vencedor span.placarI{
+    background-color: #fe2cf1;
+}
+
+.bts button{
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.jogarNv{
+    background-color: #ff5722;
+}

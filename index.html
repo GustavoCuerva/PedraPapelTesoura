@@ -11,7 +11,7 @@
     <h1>PEDRA PAPEL TESOURA</h1>
     <hr>
 
-
+<!--Opcoes-->
     <div class="config">
         <div><input type="text" name="nome" placeholder="Seu Nome"></div>
         <div class="rodadas">
@@ -20,7 +20,7 @@
         </div>
     <div class="jogar"><input type="submit" name="Jogar" value="Jogar"></div>
     </div>
-</div>
+    </div>
 
 <!--Jogo-->
     <div class="aling none">
@@ -44,9 +44,20 @@
         <span>0</span>
     </div>
 </div>
-<div class="btns">
-    <div><button class="reiniciar none">Reiniciar</button></div>
-    <div><button class="sair none">Sair</button></div>
+<div class="btns none">
+    <div><button class="reiniciar" onclick="reiniciar()">Reiniciar</button></div>
+    <div><button class="sair" onclick="jogarNovamente()">Sair</button></div>
+</div>
+
+<!--Tela do Ganhador-->
+<div class="vencedor none">
+    <h2></h2>
+    <br>
+    <span class="placarJ">0</span><span>X</span><span class="placarI">0</span>
+    <div class="bts">
+    <button class="reiniciar" onclick="reiniciar()">Reiniciar</button>
+    <button class="jogarNv" onclick="jogarNovamente()">Jogar novamente</button>
+</div>
 </div>
 
     <script src="script.js"></script>
