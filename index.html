@@ -11,19 +11,43 @@
     <h1>PEDRA PAPEL TESOURA</h1>
     <hr>
 
-    <div class="aling">
 
+    <div class="config">
+        <div><input type="text" name="nome" placeholder="Seu Nome"></div>
+        <div class="rodadas">
+            <label for="rodadas" class="labelInput">Quantidade de rodadas</label>
+            <input type="number" name="rodadas" id="rodadas" required>
+        </div>
+    <div class="jogar"><input type="submit" name="Jogar" value="Jogar"></div>
+    </div>
+</div>
+
+<!--Jogo-->
+    <div class="aling none">
         <div class="player">
+            <h2 class="nomeJogador">Jogador 1</h2>
             <div><img opt="pedra" src="img/rock.png"></div>
             <div><img opt="papel" src="img/paper.png"></div>
             <div><img opt="tesoura" src="img/scisor.png"></div>
         </div>
         <div class="IA">
+            <h2 class="nomeIA">Gustavo</h2>
             <div><img opt="pedra" src="img/rock.png"></div>
             <div><img opt="papel" src="img/paper.png"></div>
             <div><img opt="tesoura" src="img/scisor.png"></div>
         </div>
+    
+    <div class="placar">
+        <span class="placarJogador">0</span><span>X</span><span class="placarIA">0</span>
     </div>
+    <div class="rodadasRestante">
+        <span>0</span>
+    </div>
+</div>
+<div class="btns">
+    <div><button class="reiniciar none">Reiniciar</button></div>
+    <div><button class="sair none">Sair</button></div>
+</div>
 
     <script src="script.js"></script>
 </body>

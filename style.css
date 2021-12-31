@@ -8,16 +8,151 @@ h1{
     margin: 30px;
 }
 
+/*Jogo*/
+
 .aling{
-    margin-left: 25%;
     display: flex;
+    width: 100%;
+    text-align: center;
 }
 
 div img{
     max-width: 150px;
-    cursor: pointer;
 }
 
 .player, .IA{
     width: 50%;
+}
+
+.player{
+    cursor: pointer;
+}
+
+.placar{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.placar span{
+    margin: 3px;
+    background-color: #01dfba;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.placar span.placarJogador{
+    background-color: #0c7cea;
+}
+
+.placar span.placarIA{
+    background-color: #fe2cf1;
+}
+
+.rodadasRestante{
+    position: fixed;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+}
+
+.rodadasRestante span{
+    margin: 3px;
+    background-color: #ff0505;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.btns{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.btns div{
+    width: 50%;
+}
+
+.btns button{
+    border: none;
+    height: 40px;
+    width: 70px;
+    color: white;
+    cursor: pointer;
+}
+
+.reiniciar{
+    background-color: rgb(16, 240, 16);
+}
+
+.sair{
+    background-color: red;
+}
+
+/*Opções*/
+
+.config{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
+    width: 70%;
+    max-width: 500px;
+    height: 25%;
+    max-height: 300px;
+    padding-top: 10px;
+    border-radius: 15px;
+    min-width: 400px;
+    min-height: 175px;
+}
+
+.config div{
+    margin: 10px;
+}
+
+.config input{
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 15px;
+}
+
+.config input[type=text]{
+    width: 100%;
+}
+
+.config input[type=submit]{
+    width: 100%;
+    cursor: pointer;
+    background-color: #0fe907;
+    color: white;
+}
+
+div.rodadas{
+    text-align: center;
+}
+
+div.rodadas label{
+    color: white;
+    font-size: 20px;
+}
+
+div.rodadas input{
+    width: 53%;
+    text-align: center;
+}
+
+
+
+/*Mostrar e sumir*/
+
+.none{
+    display: none;
 }
